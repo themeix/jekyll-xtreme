@@ -1,0 +1,69 @@
+####################################################
+#
+# Welcome to Xtream Graphix Jekyll Template
+#
+# Product Link : https://themeix.com/product/xtream-graphix-jekyll-template/
+# Version : v1.0.0
+#
+####################################################
+
+# Site settings
+title: "Xtream Graphix - Jekyll Premim Theme"
+email: "chad@xtreme-graphix.com"
+phone: "(715) 874-5427"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: " " # the base hostname & protocol for your site, e.g. http://example.com
+logo: /assets/images/logo/logo-light.png
+footer_logo: /assets/images/logo/logo-light.png
+description: "Xtream Graphix is a responsive Jekyll template for your business website"
+keywords: "jekyll, minimal jekyll, jekyll theme, responsive jekyll, seo friendly blog, super fast blog, responsive"
+mailclimp: 'https://themeix.us16.list-manage.com/subscribe/post?u=307862c135e4548eecf86f389&amp;id=4784863884'
+dribble: https://dribble.com/themeix
+facebook: https://facebook.com/themeix
+instagram: https://instagram.com/themeix
+youtube: https://youtube.com/themeix
+twitter: https://twitter.com/themeix_com
+linkedin: https://linkedin.com/themeix
+pinterest: https://pinterest.com/themeix
+
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+
+
+# Site configuration for the Jekyll 2 Pagination Gem
+pagination:
+  enabled: false
+  debug: true
+  collection: 'posts'
+  per_page: 1
+  permalink: '/pages/:num/' # Pages are simple html files 
+  title: ':title - page :num'
+  limit: 0 
+  sort_field: 'date'
+  sort_reverse: true
+  category: 'posts'
+  tag: ''
+  locale: '' 
+  trail: 
+    before: 2
+    after: 
+  extension: 'html'
+  indexpage: 'index'
+    
+  
+
+
+collections:
+  services:
+    output: true
+    permalink: /service/:path/
+    
+feed:
+  collections:
+    posts:
+      path: "/index.xml"

@@ -1,0 +1,81 @@
+<!-- header_section - start
+		================================================== -->
+<header class="header_section sticky_header header_default clearfix">
+   <div class="header_top bg_light clearfix">
+      <div class="maxw_1420 container">
+         <div class="row align-items-center">
+            <div class="col-lg-6">
+               <ul class="header_contact_info ul_li clearfix">
+                  <li><i class="far fa-map-marker-alt"></i> Elk Mound, Wisconsin, USA</li>
+                  <li><i class="far fa-envelope-open"></i> {{site.email}}</li>
+               </ul>
+            </div>
+
+            <div class="col-lg-6">
+               <ul class="header_items_list ul_li_right clearfix">
+                  <li>
+                     <ul class="header_contact_info ul_li clearfix">
+                        <li><i class="far fa-clock"></i> Sun - Monday, 09 am - 04 pm</li>
+                     </ul>
+                  </li>
+                  <li>
+                     <ul class="primary_social_links ul_li clearfix">
+                        <li><a href="{{site.facebook | relative_url}}"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="{{site.twitter | relative_url}}"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="{{site.youtube | relative_url}}"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="{{site.linkedin | relative_url}}"><i class="fab fa-linkedin"></i></a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="header_bottom bg-white ">
+      <div class="maxw_1420 container">
+         <div class="row align-items-center">
+
+            <div class="col-lg-3">
+               <div class="brand_logo">
+                  <a href="{{'/' | relative_url }}">
+                     <img src="{{'/assets/images/logo/logo_02_1x.png' | relative_url }}"
+                        srcset="{{'/assets/images/logo/logo_02_2x.png' | relative_url }} 2x" alt="Logo">
+                  </a>
+                  <ul class="mobilemenu_btns_group ul_li_right clearfix">
+                     <li>
+                        <button type="button" class="search_btn" data-toggle="collapse" data-target="#search_body_collapse"
+                           aria-expanded="false" aria-controls="search_body_collapse">
+                           <i class="fal fa-search"></i>
+                        </button>
+                     </li>
+                     <li>
+                        <button type="button" class="mobile_menu_btn"><i class="fal fa-bars"></i></button>
+                     </li>
+                  </ul>
+               </div>
+         
+            </div>
+
+            <div class="col-lg-6">
+               {% include navigation.html %}
+            </div>
+
+            <div class="col-lg-3">
+               <ul class="header_btns_group ul_li_right clearfix">
+
+                  <li>
+                     <a class="custom_btn bg_default_orange" href="{{'/contact' | relative_url }}">
+                        get a quote
+                        <span><i class="fal fa-arrow-right"></i></span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+
+         </div>
+      </div>
+   </div>
+</header>
+<!-- header_section - end
+		================================================== -->

@@ -1,0 +1,22 @@
+<div class="blog_grid_2">
+  {% if post.post_image %}
+  <a class="item_image" target="_blank" href="{{post.url | relative_url}}">
+    <img src="{{post.post_image | relative_url }}" alt="{{post.title}}">
+  </a>
+  {% endif %}
+
+  <div class="item_content">
+    {% for category in post.categories %}
+      <a class="post_category bg_default_orange" href="#">{{category}}</a>
+    {% endfor %}
+
+    <h3 class="item_title">
+      <a target="_blank" href="{{post.url | relative_url}}">
+        {{post.title}}
+      </a>
+    </h3>
+  </div>
+  <ul class="post_meta ul_li clearfix">
+    <li><a href="{{post.url | relative_url}}"><i class="far fa-arrow-right"></i> Readmore</a></li>
+  </ul>
+</div>

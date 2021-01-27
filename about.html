@@ -1,0 +1,331 @@
+--- 
+layout: default 
+title: About 
+permalink: /about 
+cover_img: '/assets/images/breadcrumb/bg_01.jpg'
+---
+
+<!-- main body - start
+		================================================== -->
+<main>
+
+
+	{% include mobile-menu.html %}
+
+
+	{% include breadcrumb.html %}
+
+
+	<!-- about_section - start
+			================================================== -->
+	<section class="about_section sec_ptb_130 clearfix">
+		<div class="container">
+			<div class="row justify-content-lg-between justify-content-md-center justify-content-sm-center">
+
+				<div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+					<div class="about_image_1 wow fadeInUp2" data-wow-delay=".1s">
+						<img src="{{'/assets/images/about/img_01.png' | relative_url }}" alt="image_not_found">
+					</div>
+				</div>
+
+				<div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+					<div class="about_content">
+						<div class="section_title wow fadeInUp2" data-wow-delay=".1s">
+							<h4 class="small_title">About Our Company</h4>
+							<h2 class="big_title mb-0">
+								Printing Your Dream Works With Printem
+							</h2>
+							<span class="biggest_title">About</span>
+						</div>
+
+						<p class="wow fadeInUp2" data-wow-delay=".2s">
+							<span>
+								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accu santium doloremque
+								laudantium, totam rem aperiam, eaque ipquae ab illo inventore veritatis et quasi
+								architecto beatae
+							</span>
+						</p>
+						<p class="mb-0 wow fadeInUp2" data-wow-delay=".3s">
+							But I must explain to you how all this mistaken idea of denouncing pleasure and praising
+							pain was born and I will give you a complete account of the system and expound the actual
+							teachings of the great explorer of the truth, the master-build human happiness. No one
+							rejects, dislikes, or avoids pleasure
+						</p>
+
+						<div class="row wow fadeInUp2" data-wow-delay=".4s">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+								<div class="about_certificate clearfix">
+									<div class="item_icon">
+										<img src="{{'/assets/images/about/iso.png' | relative_url}}" alt="iso_not_found">
+									</div>
+									<div class="item_content">
+										<h3 class="item_title">ISO Certified</h3>
+										<p>
+											Denouncing pleasure and praising pain was born
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+								<div class="about_certificate clearfix">
+									<div class="item_icon">
+										<img src="{{'/assets/images/about/reward.png' | relative_url}}" alt="iso_not_found">
+									</div>
+									<div class="item_content">
+										<h3 class="item_title">Award Wins</h3>
+										<p>
+											Denouncing pleasure and praising pain was born
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- about_section - end
+			================================================== -->
+
+
+	<!-- service_section - start
+			================================================== -->
+	<section class="service_section sec_ptb_130 bg_gray clearfix">
+		<div class="container">
+
+			<div class="row justify-content-center">
+				<div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+					<div class="section_title text-center mb_30 wow fadeInUp2" data-wow-delay=".1s">
+						<h4 class="small_title">What We Offers</h4>
+						<h2 class="big_title mb-0">
+							We Provide Lot’s Of Printing & Branding Service
+						</h2>
+						<span class="biggest_title">Services</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				{% assign delay = 3 %}
+				{% for service in site.services %}
+				<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".{{delay}}s">
+					<div class="service_grid">
+						<div class="item_image">
+							<img src="{{service.img_src | relative_url}}" alt="{{service.title}}">
+						</div>
+						<div class="item_content">
+							<h3 class="item_title">{{service.title}}</h3>
+							<p>{{service.description}}</p>
+							<a class="icon_btn" target="_blank" href="{{service.url | relative_url }}"><i
+									class="fal fa-arrow-right"></i></a>
+							<span class="bg_icon">
+								<img src="{{'/assets/images/services/bg_icon.png' | relative_url}}" alt="icon_not_found">
+							</span>
+						</div>
+					</div>
+				</div>
+				{% assign delay = delay | plus: 2 %}
+				{% endfor %}
+				
+			</div>
+
+		</div>
+	</section>
+	<!-- service_section - end
+			================================================== -->
+
+
+	<!-- team_section - start
+			================================================== -->
+	<section class="team_section sec_ptb_130 clearfix">
+		<div class="container">
+
+			<div class="row justify-content-center">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+					<div class="section_title text-center mb_30 wow fadeInUp2" data-wow-delay=".1s">
+						<h4 class="small_title">Join Our Teams</h4>
+						<h2 class="big_title mb-0">
+							Meet Our Exclusive Team Member
+						</h2>
+						<span class="biggest_title">Team</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				{% for member in site.data.team_members %}
+				<div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 wow fadeInUp2" data-wow-delay=".3s">
+					<div class="team_grid">
+						<div class="item_image">
+							<img src="{{member.img_src | relative_url }}" alt="{{member.name}}">
+						</div>
+						<div class="item_content">
+							<h3 class="member_name">{{member.name}}</h3>
+							<span class="member_title">{{member.designation}}</span>
+							<ul class="square_social_links ul_li clearfix">
+								<li>
+									<a class="bg_default_lightblue" href="{{member.facebook | relative_url}}">
+										<i class="fab fa-facebook-f"></i>
+										<i class="fab fa-facebook-f"></i>
+									</a>
+								</li>
+								<li>
+									<a class="bg_default_orange" href="{{member.twitter | relative_url}}">
+										<i class="fab fa-twitter"></i>
+										<i class="fab fa-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a class="bg_default_yellow" href="{{member.youtube | relative_url}}">
+										<i class="fab fa-youtube"></i>
+										<i class="fab fa-youtube"></i>
+									</a>
+								</li>
+								<li>
+									<a class="bg_default_purple" href="{{member.linkedin | relative_url}}">
+										<i class="fab fa-linkedin"></i>
+										<i class="fab fa-linkedin"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+
+		</div>
+	</section>
+	<!-- team_section - end
+			================================================== -->
+
+
+	<!-- faq_section - start
+			================================================== -->
+	<section class="faq_section bg_default_blue clearfix">
+		<div class="container-fluid p-0">
+			<div
+				class="row no-gutters align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+
+				<div class="col-lg-6 col-md-7 col-sm-9 col-xs-12">
+					<div class="faq_image wow fadeIn" data-wow-delay=".1s">
+						<img src="{{'/assets/images/faqs/img_01.jpg' | relarelative_url }}" alt="image_not_found">
+					</div>
+				</div>
+
+				<div class="col-lg-6 col-md-7 col-sm-9 col-xs-12">
+					<div class="faq_content_wrap text-white">
+						<div class="section_title mb_50 wow fadeInUp2" data-wow-delay=".3s">
+							<h4 class="small_title">Faq</h4>
+							<h2 class="big_title text-white mb-0">
+								Frequently Asked Questions
+							</h2>
+							<span class="biggest_title">Faq</span>
+						</div>
+
+						<div id="faq_accordion" class="faq_accordion wow fadeInUp2" data-wow-delay=".4s">
+							{% assign i = 1 %}
+							{% for faq in site.data.faqs %}
+								<div class="card">
+									<div class="card-header" id="heading_{{i}}">
+										<button data-toggle="collapse" data-target="#collapse_{{i}}" aria-expanded="true"
+											aria-controls="collapse_{{i}}">
+											{{faq.question}}
+										</button>
+									</div>
+
+									<div id="collapse_{{i}}" class="collapse {% if i == 0 %}show{% endif %} " aria-labelledby="heading_{{i}}" data-parent="#faq_accordion">
+										<div class="card-body">
+											<p class="mb-0">
+												{{faq.answer}}
+											</p>
+										</div>
+									</div>
+								</div>
+								{% assign i = i | plus: 1 %}
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- faq_section - end
+			================================================== -->
+
+
+	<!-- skill_section - start
+			================================================== -->
+	<section class="skill_section bg_default_orange clearfix">
+		<div class="container-fluid p-0">
+			<div
+				class="row no-gutters align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+
+				<div class="col-lg-6 col-md-7 col-sm-9 col-xs-12 order-last">
+					<div class="faq_image wow fadeIn" data-wow-delay=".1s">
+						<img src="{{'/assets/images/skills/img_01.jpg' | relative_url }}" alt="image_not_found">
+					</div>
+				</div>
+
+				<div class="col-lg-6 col-md-7 col-sm-9 col-xs-12">
+					<div class="skill_content_wrap text-white">
+						<div class="section_title mb_50 wow fadeInUp2" data-wow-delay=".3s">
+							<h4 class="small_title text-white">Our Skills</h4>
+							<h2 class="big_title text-white mb-0">
+								Professional Skills For Printing
+							</h2>
+							<span class="biggest_title">Skils</span>
+						</div>
+
+						<p class="mb-0 wow fadeInUp2" data-wow-delay=".4s">
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+							doloremqe laudantium totam rem aperiam eaque ipsa quae abillo inventore
+							veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+						</p>
+
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".5s">
+								<div class="circle_progress_item">
+									<div class="printing_bar circle_progress">
+										<strong class="percentage_text text-white"></strong>
+									</div>
+									<h4 class="item_title text-white">Printing & Design</h4>
+									<p class="mb-0">
+										Sed ut perspiciatis unde omnis
+										natus error sit voluptatem
+									</p>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".6s">
+								<div class="circle_progress_item">
+									<div class="branding_bar circle_progress">
+										<strong class="percentage_text text-white"></strong>
+									</div>
+									<h4 class="item_title text-white">Design & Branding</h4>
+									<p class="mb-0">
+										Sed ut perspiciatis unde omnis
+										natus error sit voluptatem
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- skill_section - end
+			================================================== -->
+
+
+	{% include testimonial-section.html %}
+
+
+</main>
+<!-- main body - end
+		================================================== -->

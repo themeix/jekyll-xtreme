@@ -1,0 +1,57 @@
+--- 
+layout: default
+title: Portfolio
+permlaink: /protfolio
+cover_img: '/assets/images/breadcrumb/bg_01.jpg'
+---
+
+<!-- main body - start
+		================================================== -->
+<main>
+
+
+	{% include mobile-menu.html %}
+
+	{% include breadcrumb.html %}
+
+
+	<!-- portfolio_section - start
+			================================================== -->
+	<section class="portfolio_section sec_ptb_130 clearfix">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 col-md-8 col-sm-10 col-xs-12">
+					<div class="section_title text-center mb_50 wow fadeInUp2" data-wow-delay=".1s">
+						<h4 class="small_title">Our Recent Works</h4>
+						<h2 class="big_title mb-0">
+							Let’s See Our Latest Project That Recently Done
+						</h2>
+						<span class="biggest_title">Works</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="masonry_portfolio_grid grid wow fadeInUp2" data-wow-delay=".3s">
+				<div class="grid-sizer"></div>
+				{% for protfolio in site.data.misonary-protfolios %}
+				<div class="grid-item zoom-gallery">
+					<div class="portfolio_fullimage">
+						<a class="plus_effect popup_image" target="_blank" href="{{protfolio.img_src | relative_url }}">
+							<img src="{{protfolio.img_src | relative_url }}" alt="{{protfolio.name}}">
+						</a>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+		</div>
+	</section>
+	<!-- portfolio_section - end
+			================================================== -->
+
+
+</main>
+<!-- main body - end
+		================================================== -->

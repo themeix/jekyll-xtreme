@@ -1,0 +1,79 @@
+---
+layout: default
+title: FAQ
+permalink: /faq
+cover_img: '/assets/images/breadcrumb/bg_01.jpg'
+---
+<main>
+
+	<!-- faq_section - start
+			================================================== -->
+	<div class="faq_section sec_ptb_130 clearfix">
+		<div class="container">
+			<div class="row justify-content-lg-between justify-content-md-center justify-content-sm-center">
+
+				<div class="col-lg-5 col-md-8 col-sm-10 col-xs-12">
+					<div id="left_faq_accordion" class="faq_accordion mr__30 wow fadeInUp2" data-wow-delay=".1s">
+						{% assign i = 1 %}
+						{% for faq in site.data.faqs %}
+
+						<div class="card">
+							<div class="card-header" id="left_heading_{{i}}">
+								<button data-toggle="collapse" data-target="#left_collapse_{{i}}" aria-expanded="true"
+									aria-controls="left_collapse_{{i}}">
+									{{faq.question}}
+								</button>
+							</div>
+
+							<div id="left_collapse_{{i}}" class="collapse {% if i == 1%}show{% endif %}" aria-labelledby="left_heading_{{i}}"
+								data-parent="#left_faq_accordion">
+								<div class="card-body">
+									<p class="mb-0">
+										{{faq.answer}}
+									</p>
+								</div>
+							</div>
+						</div>
+
+						{% assign i = i | plus: 2 %}
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="col-lg-5 col-md-8 col-sm-10 col-xs-12">
+					<div id="right_faq_accordion" class="faq_accordion ml__30 mb-0 wow fadeInUp2" data-wow-delay=".3s">
+						{% assign i = 2 %}
+						{% for faq in site.data.faqs %}
+
+						<div class="card">
+							<div class="card-header" id="right_heading_{{i}}">
+								<button data-toggle="collapse" data-target="#right_collapse_{{i}}" aria-expanded="true"
+									aria-controls="right_collapse_{{i}}">
+									{{faq.question}}
+								</button>
+							</div>
+
+							<div id="right_collapse_{{i}}" class="collapse" aria-labelledby="right_heading_{{i}}"
+								data-parent="#right_faq_accordion">
+								<div class="card-body">
+									<p class="mb-0">
+										{{faq.answer}}
+									</p>
+								</div>
+							</div>
+						</div>
+
+						{% assign i = i | plus: 2 %}
+						{% endfor %}
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- faq_section - end
+			================================================== -->
+
+</main>
+<!-- main body - end
+		================================================== -->

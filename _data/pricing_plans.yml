@@ -1,0 +1,20 @@
+- name: Regular Plan
+  img_src: /assets/images/pricing/icon_01.png
+  currency: $
+  price: 39.99
+  description: Sed ut perspiis unde omnis iste natus error sit voluptatem accusantiu dolmque laudantium totam rem aperiam
+  link: /#
+
+- name: Smart Plan
+  img_src: /assets/images/pricing/icon_01.png
+  currency: $
+  price: 58.99
+  description: Sed ut perspiis unde omnis iste natus error sit voluptatem accusantiu dolmque laudantium totam rem aperiam
+  link: /#
+
+- name: Premium Plan
+  img_src: /assets/images/pricing/icon_01.png
+  currency: $
+  price: 99.99
+  description: Sed ut perspiis unde omnis iste natus error sit voluptatem accusantiu dolmque laudantium totam rem aperiam
+  link: /#

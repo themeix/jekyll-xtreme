@@ -1,0 +1,78 @@
+--- 
+layout: default 
+title: Pricing 
+permalink: /pricing 
+cover_img: '/assets/images/breadcrumb/bg_01.jpg'
+---
+
+<!-- main body - start
+		================================================== -->
+<main>
+
+
+	{% include mobile-menu.html %}
+
+	{% include breadcrumb.html %}
+
+
+			<!-- pricing_section - start
+			================================================== -->
+			<section class="pricing_section sec_ptb_130 bg_gray deco_wrap clearfix">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-8 col-sm-10 col-xs-12">
+							<div class="section_title text-center mb_50 wow fadeInUp2" data-wow-delay=".1s">
+							 
+								<h2 class="big_title mb-0">
+									We Have A Smart Pricing Plan For Printing
+								</h2>
+								<span class="biggest_title">Pricing</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="row justify-content-center">
+						{% for plan in site.data.pricing_plans %}
+						<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".3s">
+							<div class="pricing_plan text-center">
+								<div class="item_header">
+									
+									<h3 class="item_title">{{plan.name}}</h3>
+								</div>
+
+								<div class="item_body">
+									<div class="item_icon">
+										<img src="{{plan.img_src | relative_url}}" alt="image_not_found">
+									</div>
+									<strong class="pricing_text"><sup>{{plan.currency}}</sup>{{plan.price}}</strong>
+									<p class="mb-0">{{plan.description}}</p>
+								</div>
+
+								<div class="item_footer">
+									<a class="custom_btn bg_default_orange" href="{{plan.url | relative_url}}">
+										choose plan
+										<span><i class="fal fa-arrow-right"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="deco_image shape_1">
+					<img src="{{'/assets/images/pricing/shape_01.png' | relative_url }}" alt="image_not_found">
+				</div>
+				<div class="deco_image shape_2">
+					<img src="{{'/assets/images/pricing/shape_02.png' | relative_url }}" alt="image_not_found">
+				</div>
+			</section>
+			<!-- pricing_section - end
+			================================================== -->
+
+ 
+
+
+		</main>
+	
+		

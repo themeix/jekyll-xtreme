@@ -1,0 +1,54 @@
+--- 
+layout: default
+title: Services
+permalink: /all-services
+cover_img: '/assets/images/breadcrumb/bg_01.jpg'
+--- 
+
+<!-- main body - start
+		================================================== -->
+<main>
+
+	{% include mobile-menu.html %}
+	{% include breadcrumb.html %}
+
+	<!-- feature_section - start
+			================================================== -->
+	<section class="feature_section sec_ptb_130 clearfix">
+		<div class="container">
+
+			<div class="row justify-content-center">
+				<div class="col-lg-7 col-md-8 col-sm-9">
+					<div class="section_title text-center mb_50 wow fadeInUp2" data-wow-delay=".1s">
+						<h4 class="small_title">Our Core Features</h4>
+						<h2 class="big_title mb-0">
+							Experience Allows Us To Printing Things
+						</h2>
+						<span class="biggest_title">Features</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				{% assign delay = 1 %}
+				{% for service in site.services %}
+					<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".{{delay}}s">
+						{% include service-card.html %}
+					</div>
+					{% assign delay = delay | plus:2 %}
+				{% endfor %}
+			</div>
+
+		</div>
+	</section>
+	<!-- feature_section - end
+			================================================== -->
+
+
+	{% include cta-section.html %}
+	{% include testimonial-section.html %}
+
+
+</main>
+<!-- main body - end
+		================================================== -->

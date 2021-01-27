@@ -1,0 +1,24 @@
+- name: brand1
+  img_src: /assets/images/brands/img_01.png
+  url: /#
+  
+- name: brand2
+  img_src: /assets/images/brands/img_01.png
+  url: /#
+  
+- name: brand3
+  img_src: /assets/images/brands/img_01.png
+  url: /#
+  
+- name: brand4
+  img_src: /assets/images/brands/img_01.png
+  url: /#
+  
+- name: brand5
+  img_src: /assets/images/brands/img_01.png
+  url: /#
+  
+- name: brand6
+  img_src: /assets/images/brands/img_01.png
+  url: /#
+

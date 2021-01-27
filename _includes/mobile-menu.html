@@ -1,0 +1,29 @@
+<!-- sidebar mobile menu - start
+			================================================== -->
+            <div class="sidebar-menu-wrapper">
+                <div class="sidebar_mobile_menu">
+        
+                    <span class="close_btn"><i class="fal fa-times"></i></span>
+        
+                    <div class="mobile_menu_list clearfix">       
+                        <ul class="ul_li_block clearfix">
+                            {% for link in site.data.navigation %}
+                            <li class="{% if link.submenu %}dropdown{% endif %}">
+                                <a href="{{ link.url|prepend:site.baseurl }}" {% if link.submenu %}data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %} >{{ link.text }}</a>
+                                {% if link.submenu %}
+                                <ul class="dropdown-menu">
+                                    {% for sublink in link.submenu %}
+                                    <li><a href="{{ sublink.url|prepend:site.baseurl }}">{{ sublink.text }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                           
+                        </ul>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <!-- sidebar mobile menu - end
+                    ================================================== -->

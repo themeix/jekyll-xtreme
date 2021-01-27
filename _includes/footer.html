@@ -1,0 +1,111 @@
+<!-- footer_section - start
+		================================================== -->
+<footer class="footer_section bg_gray clearfix">
+   <div class="container">
+
+      <div class="footer_brand_area border_bottom clearfix">
+         <div class="row align-items-center justify-content-lg-between">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="brands_list brand_carousel owl-carousel owl-theme wow fadeInUp2"
+                  data-wow-delay=".3s">
+                  {% for brand in site.data.brands %}
+                  <div class="logo_image">
+                     <a href="{{brand.url | relative_url }}">
+                        <img src="{{brand.img_src | relative_url }}" alt="{{brand.name}}">
+                     </a>
+                  </div>
+                  {% endfor %}
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="footer_widget_area clearfix">
+         <div class="row justify-content-lg-between">
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+               <div class="widget footer_useful_links">
+                  <h3 class="footer_widget_title">Quick Links</h3>
+                  <ul class="ul_li_block clearfix">
+                     <li><a href="{{'/about' | relative_url}}">Company History</a></li>
+                     <li><a href="{{'/all-services' | relative_url}}">>Our Services</a></li>
+                     <li><a href="{{'/blog' | relative_url}}">Latest News</a></li>
+                     <li><a href="{{'/protfolio' | relative_url}}">Recent Product</a></li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+               <div class="widget footer_useful_links">
+                  <h3 class="footer_widget_title">Services</h3>
+                  <ul class="ul_li_block clearfix">
+                     {% for service in site.services limit:5 %}
+                     <li><a href="{{service.url | relative_url }}">{{service.title}}</a></li>
+                     {% endfor %}
+                  </ul>
+               </div>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+               <div class="widget footer_contact_form">
+                  <h3 class="footer_widget_title">Contact Us</h3>
+                  <p class="mb_30">
+                     Sed ut persiatis unde omnis iste natusec error sit voluptatem accusantium
+                  </p>
+                  <form  method="POST" action="{{site.mailclimp}}">
+                     <div class="form_item">
+                        <input type="email" name="email" placeholder="Enter Your Email">
+                        <button type="submit" class="submit_btn"><i class="far fa-arrow-right"></i></button>
+                     </div>
+                  </form>
+                  <span class="footer_hotline"><i class="far fa-phone"></i> {{site.phone}}</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="footer_bottom_boxed bg_white clearfix">
+         <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 col-md-6">
+               <p class="copyright_text mb-0">© Copyright <script>document.write(new Date().getFullYear())</script>  All Right Reserved Design By <a class="author_links"
+                     target="_blank" href="https://themeix.com">Themeix</a></p>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+               <ul class="circle_social_links ul_li_right clearfix">
+                  <li>
+                     <a class="bg_facebook" href="{{site.facebook | relative_url }}">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="bg_twitter" href="{{site.twitter | relative_url }}">
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-twitter"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="bg_youtube" href="{{site.youtube | relative_url }}">
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-youtube"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="bg_linkedin" href="{{site.linkedin | relative_url }}">
+                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-linkedin"></i>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+   </div>
+</footer>
+<!-- footer_section - end
+      ================================================== -->
+{% include scripts/foot.html %}

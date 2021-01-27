@@ -1,0 +1,22 @@
+- text: Home
+  url: /
+- text: About
+  url: /about
+- text: Services
+  url: /all-services
+  submenu:
+    - text: Service Details
+      url: /service/3d-and-logo-printing/
+- text: Protfolio
+  url: /protfolio
+- text: Pages
+  url: /#
+  submenu:
+    - text: Pricing Plan
+      url: /pricing
+    - text: F.A.Q
+      url: /faq/
+- text: Upload
+  url: /upload
+- text: Contact
+  url: /contact

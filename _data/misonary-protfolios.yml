@@ -1,0 +1,26 @@
+- name: Protfolio 1
+  img_src: 'assets/images/portfolio/masonry/img_01.jpg'
+  
+- name: Protfolio 2
+  img_src: '/assets/images/portfolio/masonry/img_03.jpg'
+
+- name: Protfolio 3
+  img_src: '/assets/images/portfolio/masonry/img_04.jpg'
+
+- name: Protfolio 4
+  img_src: '/assets/images/portfolio/masonry/img_05.jpg'
+
+- name: Protfolio 5
+  img_src: '/assets/images/portfolio/masonry/img_06.jpg'
+
+- name: Protfolio 6
+  img_src: '/assets/images/portfolio/masonry/img_07.jpg'
+
+- name: Protfolio 7
+  img_src: '/assets/images/portfolio/masonry/img_08.jpg'
+
+- name: Protfolio 8
+  img_src: '/assets/images/portfolio/masonry/img_09.jpg'
+
+- name: Protfolio 9
+  img_src: '/assets/images/portfolio/masonry/img_02.jpg'

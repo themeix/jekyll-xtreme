@@ -1,0 +1,40 @@
+<!-- slider_section - start
+			================================================== -->
+<section class="slider_section home_three_slider clearfix">
+    <div class="main_slider owl-carousel owl-theme clearfix">
+
+        {% for slide in site.data.hero-slides %}
+        <div class="item" data-background="{{slide.img_src | relative_url}}">
+            <div class="container">
+                <div
+                    class="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+                    <div class="col-lg-5 col-md-8 col-sm-12 col-xs-12 order-last">
+                        <div class="slider_image">
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                        <div class="slider_content text-white">
+
+                            <h3 class="item_title text-uppercase text-white mb-0">{{slide.title}}</h3>
+                            <p>{{slide.description}}</p> </p>
+                            <ul class="btns_group ul_li clearfix">
+                                <li>
+                                    <a class="custom_btn bg_default_orange" target="_blank" href="{{slide.btn_url | relative_url}}">
+                                        discover more
+                                        <span><i class="fal fa-arrow-right"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+<!-- slider_section - end		
+                    ================================================== -->

@@ -1,0 +1,73 @@
+{% assign popup_bg = '/assets/images/about/img_02.jpg' %}
+{% assign youtube_url = 'http://www.youtube.com/watch?v=0O2aH4XLbto' %}
+{% assign  avater_img = '/assets/images/meta/img_01.png' %}
+{% assign  experience_img = '/assets/images/about/img_03.png' %}
+
+<!-- about_section - start
+			================================================== -->
+<section class="about_section sec_ptb_130 bg_gray clearfix">
+    <div class="container">
+        <div class="section_title text-center mb_80 wow fadeInUp2" data-wow-delay=".1s">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-7 col-sm-9 col-xs-12">
+                    <h4 class="small_title">About Our Company</h4>
+                    <h2 class="big_title mb-0">
+                        Printing Your Dream Works With Printem
+                    </h2>
+                    <span class="biggest_title">AboutUs</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-between justify-content-md-center justify-content-sm-center">
+            <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+                <div class="about_image_2 wow fadeInUp2" data-wow-delay=".3s">
+                    <img src="{{popup_bg | relative_url}}" alt="icon_not_found">
+                    <a class="play_btn popup_video" href="{{youtube_url | relative_url }}">
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+                <div class="about_content">
+                    <p class="wow fadeInUp2" data-wow-delay=".5s">
+                        <span class="experience_image">
+                            <img src="{{experience_img | relative_url }}" alt="image_not_found">
+                        </span>
+                        <span>
+                            Sed ut perspiciatis unde omnis iste
+                            natus error sit voluptatem accusantiu
+                            dolorem laudantium, totam rem aper
+                            iam eaque ipsa quae ab illo inventore
+                            veritatis et quasi architecto beataese
+                            vitae dicta sunt explicabo. Nemo enim
+                            ipsam voluptatem quia volupta
+                        </span>
+                    </p>
+                    <p class="wow fadeInUp2" data-wow-delay=".6s">
+                        Sed ut perspicias unde omnis iste natus error sit voluptatem accusantium dolor
+                        emqu laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                        et quasi arch beatae vitae dicta sunt explicabo enim ipsam voluptatem
+                    </p>
+
+                    <div class="avatar_wrap wow fadeInUp2" data-wow-delay=".7s">
+                        <div class="avatar_image">
+                            <img src="{{avater_img | relative_url }}" alt="image_not_found">
+                        </div>
+                        <div class="avatar_content">
+                            <h4 class="avatar_name">Kristofer C. Bello</h4>
+                            <span class="avatar_title">CEO & Founder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cricle_border">
+        <img src="{{'/assets/images/about/circle_border.png' | relative_url }}" alt="icon_not_found">
+    </div>
+</section>
+<!-- about_section - end
+                    ================================================== -->

@@ -1,0 +1,10 @@
+<div class="feature_card">
+  <a class="item_image plus_effect" target="_blank" href="{{service.url | relative_url}}">
+    {% if service.img_src %}
+    <img src="{{service.img_src | relative_url }}" alt="{{service.title}}">
+    {% endif %}
+  </a>
+  <div class="item_content">
+    <h3 class="item_title">{{service.title}}</h3>
+  </div>
+</div>

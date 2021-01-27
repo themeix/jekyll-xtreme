@@ -1,0 +1,31 @@
+- name: Myron L. Boykin
+  img_src: '/assets/images/team-member/team-member-1.jpg'
+  designation: Web Designer 
+  facebook: https://www.facebook.com/
+  twitter: https://www.twitter.com/
+  youtube: https://www.youtube.com/
+  linkedin: https://www.linkedin.com/
+
+- name: Manuel M. Brode
+  img_src: '/assets/images/team-member/team-member-2.jpg'
+  designation: Senior Developer
+  facebook: https://www.facebook.com/
+  twitter: https://www.twitter.com/
+  youtube: https://www.youtube.com/
+  linkedin: https://www.linkedin.com/
+
+- name: Frank E. Stuber
+  img_src: '/assets/images/team-member/team-member-3.jpg'
+  designation: Manager
+  facebook: https://www.facebook.com/
+  twitter: https://www.twitter.com/
+  youtube: https://www.youtube.com/
+  linkedin: https://www.linkedin.com/
+
+- name: Miguel D. Vegaen
+  img_src: '/assets/images/team-member/team-member-4.jpg'
+  designation: Manager
+  facebook: https://www.facebook.com/
+  twitter: https://www.twitter.com/
+  youtube: https://www.youtube.com/
+  linkedin: https://www.linkedin.com/

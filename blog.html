@@ -1,0 +1,40 @@
+---
+layout: default
+title: Blog
+permalink: /blog
+cover_img: '/assets/images/breadcrumb/bg_01.jpg'
+---
+
+<!-- main body - start
+		================================================== -->
+<main>
+
+	{% include mobile-menu.html %}
+	{% include breadcrumb.html %}
+
+
+	<!-- blog_section - start
+			================================================== -->
+	<section class="blog_section sec_ptb_130 clearfix">
+		<div class="container">
+
+			<div class="row mt__30 mb_80 justify-content-center">
+				{% assign delay = 1 %}
+				{% for post in site.posts%}
+				<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".{{delay}}s">
+					{% include post-card.html %}
+				</div>
+				{% assign delay = delay | plus: 2 %}
+				{% endfor %}
+			</div>
+
+
+		</div>
+	</section>
+	<!-- blog_section - end
+			================================================== -->
+
+
+</main>
+<!-- main body - end
+		================================================== -->

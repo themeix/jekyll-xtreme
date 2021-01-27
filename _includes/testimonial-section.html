@@ -1,0 +1,49 @@
+<!-- testimonial_section - start
+			================================================== -->
+<section class="testimonial_section sec_ptb_130 bg_gray clearfix">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-7 col-sm-9">
+                <div class="section_title text-center mb_30 wow fadeInUp2" data-wow-delay=".1s">
+                    <h4 class="small_title">Clients Reviews</h4>
+                    <h2 class="big_title mb-0">
+                        What Our Clients Say About Our Works
+                    </h2>
+                    <span class="biggest_title">Says</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial_carousel column_3_carousel owl-carousel owl-theme wow fadeInUp2" data-wow-delay=".3s">
+            {% for testimonial in site.data.testimonials %}
+                <div class="item">
+                    <div class="testimonial_primary">
+                        <div class="content_wrap">
+                            <p>{{testimonial.review}}</p>
+                            <span class="quote_icon">
+                                <img src="{{'/assets/images/testimonial/quote_01.png' | relative_url }}" alt="{{testimonial.name}}">
+                            </span>
+                        </div>
+                        <div class="hero_info_wrap">
+                            <div class="hero_thumbnail">
+                                {% if testimonial.img_src %}
+                                    <img src="{{testimonial.img_src | relative_url}}" alt="{{testimonial.name}}">
+                                {% else %}
+                                    <img src="{{'/assets/images/testimonial/img_03.png' | relative_url}}" alt="{{testimonial.name}}">
+                                {% endif %}
+                            </div>
+                            <div class="hero_info">
+                                <h3 class="hero_name">{{testimonial.name}}</h3>
+                                <span class="hero_title">{{testimonial.designation}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+<!-- testimonial_section - end
+                    ================================================== -->
